@@ -1,5 +1,3 @@
-function First() {
-  return 'First';
+module.exports = function() {
+  console.log('First');
 };
-
-console.log(First());

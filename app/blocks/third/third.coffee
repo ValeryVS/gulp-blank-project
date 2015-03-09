@@ -1,4 +1,3 @@
-Third = ->
-  return "third"
-
-console.log Third()
+module.exports = ->
+  console.log 'Third'
+  return

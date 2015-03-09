@@ -1,5 +1,3 @@
-function Second() {
-  return 'Second';
+module.exports = function() {
+  console.log('Second');
 };
-
-console.log(Second());
