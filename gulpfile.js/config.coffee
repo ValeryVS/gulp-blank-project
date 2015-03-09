@@ -19,6 +19,14 @@ module.exports =
     src: sourceDirectory + '/**/*.jade'
     dest: publicDirectory
 
+  sass:
+    src: sourceAssets + '/*.{sass,scss}'
+    dest: publicAssets
+    settings:
+      errLogToConsole: true
+      indentedSyntax: true # Enable .sass syntax!
+      imagePath: 'assets/images' # Used by the image-url helper
+
   styles:
     src: sourceDirectory + '/blocks/**/*.css'
     dest: publicAssets
