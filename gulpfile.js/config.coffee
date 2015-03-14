@@ -25,12 +25,12 @@ module.exports =
     settings:
       indentedSyntax: true # Enable .sass syntax!
       imagePath: 'assets/images' # Used by the image-url helper
-    settingsCssimport:
-      extensions: ["css"]
 
   importCss:
     src: sourceAssets + '/import.css'
     dest: publicAssets
+    settingsCssimport:
+      extensions: ["css"]
 
   watch:
     styles:
