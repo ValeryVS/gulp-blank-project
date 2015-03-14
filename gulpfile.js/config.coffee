@@ -30,12 +30,10 @@ module.exports =
       sourceRoot: publicAssets
 
   styles:
-    src: sourceDirectory + '/blocks/**/*.css'
-    dest: publicAssets
+    src: sourceDirectory + '/**/*.{sass,scss,css}'
 
   coffee:
-    src: sourceDirectory + '/blocks/**/*.coffee'
+    src: sourceDirectory + '/**/*.coffee'
 
   scripts:
-    src: sourceDirectory + '/blocks/**/*.js'
-    dest: publicAssets
+    src: sourceDirectory + '/**/*.js'
