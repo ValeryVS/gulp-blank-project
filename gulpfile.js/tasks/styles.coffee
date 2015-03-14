@@ -1,22 +1,24 @@
 gulp       = require('gulp')
 gulpif     = require('gulp-if')
-sass       = require('gulp-ruby-sass')
+sass       = require('gulp-sass')
 sourcemaps = require('gulp-sourcemaps')
 config     = require('../config').sass
 fs         = require('fs')
 env        = require('../env')  if fs.existsSync('gulpfile.js/env.coffee')
 
-config.settings.style     = 'compressed'  if env is 'production'
-config.settings.sourcemap = 'auto'        if env is 'development'
-console.log(config.settings)
+config.settings.outputStyle = 'compressed'  if env is 'production'
 
 gulp.task 'styles', ->
-  sass(config.src, config.settigs)
+  gulp.src(config.src)
+    .pipe(gulpif(env is 'development',
+      sourcemaps.init()
+    ))
+    .pipe(sass(config.settings))
     .on('error', (err) ->
       console.error 'Error!', err.message
       return
     )
     .pipe(gulpif(env is 'development',
-      sourcemaps.write('maps', config.settingsSourcemaps)
+      sourcemaps.write()
     ))
     .pipe(gulp.dest(config.dest))

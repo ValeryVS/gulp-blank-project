@@ -22,13 +22,11 @@ module.exports =
   sass:
     src: sourceAssets + '/app.sass'
     dest: publicAssets
-    settings: {}
-    #   sourcemapPath: '../' 
-    #   errLogToConsole: true
-    #   indentedSyntax: true # Enable .sass syntax!
-    #   imagePath: 'assets/images' # Used by the image-url helper
+    settings:
+      indentedSyntax: true # Enable .sass syntax!
+      imagePath: 'assets/images' # Used by the image-url helper
     settingsSourcemaps:
-      includeContent: false
+      includeContent: true
       sourceRoot: publicAssets
 
   styles:
