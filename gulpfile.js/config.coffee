@@ -29,7 +29,7 @@ module.exports =
   importCss:
     src: sourceAssets + '/import.css'
     dest: publicAssets
-    settingsCssimport:
+    settings:
       extensions: ["css"]
 
   watch:

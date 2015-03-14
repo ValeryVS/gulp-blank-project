@@ -4,5 +4,5 @@ config     = require('../config').importCss
 
 gulp.task 'importCss', ->
   gulp.src(config.src)
-    .pipe(cssimport(config.settingsCssimport))
+    .pipe(cssimport(config.settings))
     .pipe(gulp.dest(config.dest))
