@@ -1,10 +1,12 @@
-gulp       = require('gulp')
-gulpif     = require('gulp-if')
-sass       = require('gulp-sass')
-sourcemaps = require('gulp-sourcemaps')
-config     = require('../config').sass
-fs         = require('fs')
-env        = require('../env')  if fs.existsSync('gulpfile.js/env.coffee')
+gulp        = require('gulp')
+browserSync = require('browser-sync')
+gulpif      = require('gulp-if')
+sass        = require('gulp-sass')
+sourcemaps  = require('gulp-sourcemaps')
+filter      = require('gulp-filter')
+config      = require('../config').sass
+fs          = require('fs')
+env         = require('../env')  if fs.existsSync('gulpfile.js/env.coffee')
 
 config.settings.outputStyle = 'compressed'  if env is 'production'
 
@@ -22,3 +24,5 @@ gulp.task 'sass', ->
       sourcemaps.write()
     ))
     .pipe(gulp.dest(config.dest))
+    .pipe(filter('**/*.css'))
+    .pipe(browserSync.reload({stream:true}))

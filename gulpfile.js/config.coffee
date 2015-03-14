@@ -12,6 +12,11 @@ module.exports =
   publicAssets: publicAssets
   tmpDirectory: tmpDirectory
 
+  browserSync:
+    server:
+      baseDir: publicDirectory
+    files: ['pubilc/**/*.html']
+
   browserify:
     entries: sourceAssets + '/app.js'
     dest: publicAssets
@@ -36,8 +41,10 @@ module.exports =
       extensions: ["css"]
 
   watch:
-    styles:
-      src: sourceDirectory + '/**/*.{sass,scss,css}'
+    sass:
+      src: sourceDirectory + '/**/*.{sass,scss}'
+    css:
+      src: sourceDirectory + '/**/*.css'
     coffee:
       src: sourceDirectory + '/**/*.coffee'
     scripts:
