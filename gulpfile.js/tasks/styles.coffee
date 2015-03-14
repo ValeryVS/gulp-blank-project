@@ -1,3 +1,4 @@
-gulp = require('gulp')
+gulp         = require('gulp')
+gulpSequence = require('gulp-sequence')
 
-gulp.task 'styles', ['sass','importCss']
+gulp.task 'styles', gulpSequence('importCss', 'sass')

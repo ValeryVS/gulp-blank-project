@@ -6,5 +6,6 @@ gulp.task 'clean', (cb) ->
   del [
     config.publicDirectory
     config.tmpDirectory
+    config.sourceAssetsGenerated
   ], cb
   return

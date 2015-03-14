@@ -2,11 +2,13 @@ publicDirectory = './public'
 publicAssets = publicDirectory + '/assets'
 sourceDirectory = './app'
 sourceAssets = sourceDirectory + '/assets'
+sourceAssetsGenerated = sourceAssets + '/generated'
 tmpDirectory = './.tmp'
 
 module.exports =
   publicDirectory: publicDirectory
   sourceAssets: sourceAssets
+  sourceAssetsGenerated: sourceAssetsGenerated
   publicAssets: publicAssets
   tmpDirectory: tmpDirectory
 
@@ -28,7 +30,8 @@ module.exports =
 
   importCss:
     src: sourceAssets + '/import.css'
-    dest: publicAssets
+    dest: sourceAssets + '/generated'
+    name: 'import.scss'
     settings:
       extensions: ["css"]
 
