@@ -25,15 +25,17 @@ module.exports =
     settings:
       indentedSyntax: true # Enable .sass syntax!
       imagePath: 'assets/images' # Used by the image-url helper
-    settingsSourcemaps:
-      includeContent: true
-      sourceRoot: publicAssets
+    settingsCssimport:
+      extensions: ["css"]
 
-  styles:
-    src: sourceDirectory + '/**/*.{sass,scss,css}'
+  importCss:
+    src: sourceAssets + '/import.css'
+    dest: publicAssets
 
-  coffee:
-    src: sourceDirectory + '/**/*.coffee'
-
-  scripts:
-    src: sourceDirectory + '/**/*.js'
+  watch:
+    styles:
+      src: sourceDirectory + '/**/*.{sass,scss,css}'
+    coffee:
+      src: sourceDirectory + '/**/*.coffee'
+    scripts:
+      src: sourceDirectory + '/**/*.js'

@@ -3,11 +3,11 @@ config = require('../config')
 
 gulp.task 'watch', ->
   gulp.watch [
-    config.coffee.src
-    config.scripts.src
+    config.watch.coffee.src
+    config.watch.scripts.src
   ], [ 'scripts' ]
   gulp.watch [
-    config.styles.src
+    config.watch.styles.src
   ], [ 'styles' ]
   gulp.watch [
     config.jade.src
