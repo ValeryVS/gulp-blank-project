@@ -40,6 +40,10 @@ module.exports =
     settings:
       extensions: ["css"]
 
+  images:
+    src: sourceAssets + '/images/**'
+    dest: publicAssets + '/images'
+
   watch:
     sass:
       src: sourceDirectory + '/**/*.{sass,scss}'
