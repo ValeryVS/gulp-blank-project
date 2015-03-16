@@ -26,6 +26,7 @@
     "gulp-sass": "^1.3.3",
     "gulp-sequence": "^0.3.2",
     "gulp-sourcemaps": "^1.5.0",
+    "marked": "^0.3.3",
     "require-dir": "^0.1.0",
     "uglifyify": "^3.0.1",
     "vinyl-source-stream": "^1.1.0"

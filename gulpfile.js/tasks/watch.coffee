@@ -13,6 +13,6 @@ gulp.task 'watch', ['browserSync'], ->
     config.watch.css.src
   ], [ 'importCss' ]
   gulp.watch [
-    config.jade.src
+    config.watch.html.src
   ], [ 'jade' ]
   return

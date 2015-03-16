@@ -49,3 +49,5 @@ module.exports =
       src: sourceDirectory + '/**/*.coffee'
     scripts:
       src: sourceDirectory + '/**/*.js'
+    html:
+      src: sourceDirectory + '/**/*.{jade,html,md}'

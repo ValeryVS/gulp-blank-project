@@ -1,3 +1,3 @@
 module.exports = function() {
-  console.log('Simple');
+  console.log('Fourth');
 };
