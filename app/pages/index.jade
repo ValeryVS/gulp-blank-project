@@ -6,10 +6,10 @@ html
   body
     h1 Hello world!
     p This is jade.
-    include ./blocks/first/first.jade
-    include ./blocks/second/second.html
-    include ./blocks/third/third.jade
+    include ../blocks/first/first.jade
+    include ../blocks/second/second.html
+    include ../blocks/third/third.jade
     +third({title: 'block 3', content: '3'})
     .fourth
-      include:markdown ./blocks/fourth/fourth.md
+      include:markdown ../blocks/fourth/fourth.md
     script(src='assets/app.js')

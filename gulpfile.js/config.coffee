@@ -23,7 +23,7 @@ module.exports =
     outputName: 'app.js'
 
   jade:
-    src: sourceDirectory + '/**/*.jade'
+    src: sourceDirectory + '/pages/**/*.jade'
     dest: publicDirectory
 
   sass:
