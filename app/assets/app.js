@@ -5,3 +5,6 @@ var third = require('../blocks/third/third.coffee');
 first();
 second();
 third();
+
+var AppView = require('./app-view');
+var appView = new AppView();
