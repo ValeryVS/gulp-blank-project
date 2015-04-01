@@ -1,6 +1,7 @@
 public
 node_modules
 app/assets/generated
+app/assets/import
 gulpfile.js/env.coffee
 
 .sass-cache

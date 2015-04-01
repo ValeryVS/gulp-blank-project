@@ -64,6 +64,10 @@ module.exports =
       appendCodepoints: true
       normalize: false
 
+  copyCssDependencies:
+    src: [ './node_modules/normalize.css/normalize.css' ]
+    dest: sourceAssetsStylsheets + '/import'
+
   watch:
     sass:
       src: sourceDirectory + '/**/*.{sass,scss}'

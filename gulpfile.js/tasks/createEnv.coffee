@@ -1,6 +1,6 @@
 fs     = require('fs')
 gulp   = require('gulp')
-rename = require("gulp-rename")
+rename = require('gulp-rename')
 
 gulp.task 'createEnv', ->
   unless fs.existsSync('gulpfile.js/env.coffee')
