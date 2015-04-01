@@ -2,7 +2,6 @@ gulp    = require('gulp')
 ghPages = require('gulp-gh-pages')
 open    = require('open')
 gulpif  = require('gulp-if')
-prompt  = require('gulp-prompt')
 config  = require('../config').deploy
 fs      = require('fs')
 env     = require('../env')  if fs.existsSync('gulpfile.js/env.coffee')
