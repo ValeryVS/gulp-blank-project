@@ -30,5 +30,6 @@ See tasks in gulpfile.js folder.
 TODO
 ==
 
+    add bulk-require
     add uglify to browserify
     or try webpack
