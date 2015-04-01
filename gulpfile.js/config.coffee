@@ -2,12 +2,16 @@ publicDirectory = './public'
 publicAssets = publicDirectory + '/assets'
 sourceDirectory = './app'
 sourceAssets = sourceDirectory + '/assets'
+sourceAssetsStylsheets = sourceAssets + '/stylesheets'
+sourceAssetsJavaScripts = sourceAssets + '/javascripts'
 sourceAssetsGenerated = sourceAssets + '/generated'
 tmpDirectory = './.tmp'
 
 module.exports =
   publicDirectory: publicDirectory
   sourceAssets: sourceAssets
+  sourceAssetsStylsheets: sourceAssetsStylsheets
+  sourceAssetsJavaScripts: sourceAssetsJavaScripts
   sourceAssetsGenerated: sourceAssetsGenerated
   publicAssets: publicAssets
   tmpDirectory: tmpDirectory
@@ -18,7 +22,7 @@ module.exports =
     files: ['pubilc/**/*.html']
 
   browserify:
-    entries: sourceAssets + '/app.js'
+    entries: sourceAssetsJavaScripts + '/app.js'
     dest: publicAssets
     outputName: 'app.js'
 
@@ -29,15 +33,15 @@ module.exports =
   sass:
     autoprefixer:
       browsers: ['last 2 version']
-    src: sourceAssets + '/app.sass'
+    src: sourceAssetsStylsheets + '/app.sass'
     dest: publicAssets
     settings:
       indentedSyntax: true # Enable .sass syntax!
       imagePath: 'assets/images' # Used by the image-url helper
 
   importCss:
-    src: sourceAssets + '/import.css'
-    dest: sourceAssets + '/generated'
+    src: sourceAssetsStylsheets + '/import.css'
+    dest: sourceAssetsStylsheets + '/generated'
     name: 'import.scss'
     settings:
       extensions: ["css"]
@@ -50,7 +54,7 @@ module.exports =
     name: 'Gulp Starter Icons'
     src: sourceAssets + '/icons/*.svg'
     dest: publicAssets + '/fonts'
-    sassDest: sourceAssets + '/generated'
+    sassDest: sourceAssetsStylsheets + '/generated'
     template: './gulpfile.js/tasks/iconFont/template.sass'
     sassOutputName: 'icons.sass'
     fontPath: 'fonts'
