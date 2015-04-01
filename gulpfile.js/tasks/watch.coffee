@@ -24,4 +24,7 @@ gulp.task 'watch', ['browserSync'], ->
   watch config.watch.iconFont.src, ->
     gulp.start 'iconFont'
     return
+  watch config.watch.copy.src, ->
+    gulp.start 'copy'
+    return
   return

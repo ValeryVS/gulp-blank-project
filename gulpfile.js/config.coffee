@@ -68,6 +68,10 @@ module.exports =
     src: [ './node_modules/normalize.css/normalize.css' ]
     dest: sourceAssetsStylsheets + '/import'
 
+  copy:
+    src: sourceDirectory + '/copy/*'
+    dest: publicDirectory
+
   watch:
     sass:
       src: sourceDirectory + '/**/*.{sass,scss}'
@@ -83,3 +87,5 @@ module.exports =
       src: sourceAssets + '/images/**'
     iconFont:
       src: sourceAssets + '/icons/*.svg'
+    copy:
+      src: sourceDirectory + '/copy/*'

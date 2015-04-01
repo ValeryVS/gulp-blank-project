@@ -22,4 +22,3 @@ TODO
 
 handle errors
 settings for jade (page title, etc.)
-just copy files task
