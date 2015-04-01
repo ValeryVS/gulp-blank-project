@@ -5,6 +5,7 @@ sass         = require('gulp-sass')
 sourcemaps   = require('gulp-sourcemaps')
 autoprefixer = require('gulp-autoprefixer')
 filter       = require('gulp-filter')
+handleErrors = require('../lib/handleErrors')
 config       = require('../config').sass
 fs           = require('fs')
 env          = require('../env')  if fs.existsSync('gulpfile.js/env.coffee')
@@ -17,10 +18,7 @@ gulp.task 'sass', ->
       sourcemaps.init()
     ))
     .pipe(sass(config.settings))
-    .on('error', (err) ->
-      console.error 'Error!', err.message
-      return
-    )
+    .on('error', handleErrors)
     .pipe(autoprefixer(config.autoprefixer))
     .pipe(gulpif(env is 'development',
       sourcemaps.write()
