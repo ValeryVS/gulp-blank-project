@@ -71,3 +71,7 @@ module.exports =
       src: sourceDirectory + '/**/*.js'
     html:
       src: sourceDirectory + '/**/*.{jade,html,md}'
+    images:
+      src: sourceAssets + '/images/**'
+    iconFont:
+      src: sourceAssets + '/icons/*.svg'
