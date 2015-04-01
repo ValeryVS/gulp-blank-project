@@ -3,6 +3,7 @@ node_modules
 app/assets/stylesheets/generated
 app/assets/stylesheets/import
 gulpfile.js/env.coffee
+.publish
 
 .sass-cache
 Desktop.ini

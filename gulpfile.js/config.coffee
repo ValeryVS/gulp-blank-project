@@ -75,6 +75,10 @@ module.exports =
     src: sourceDirectory + '/copy/*'
     dest: publicDirectory
 
+  deploy:
+    url: 'http://valeryvs.github.io/gulp-blank-project/',
+    src: publicDirectory + '/**/*'
+
   watch:
     sass:
       src: sourceDirectory + '/**/*.{sass,scss}'
