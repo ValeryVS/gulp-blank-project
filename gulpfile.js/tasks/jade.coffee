@@ -8,7 +8,9 @@ env          = require('../env')  if fs.existsSync('gulpfile.js/env.coffee')
 
 gulp.task 'jade', ->
   gulp.src(config.src)
-    .pipe(jade(pretty: env is 'development'))
+    .pipe(jade(
+      locals: config.locals
+      pretty: env is 'development'))
     .on('error', handleErrors)
     .pipe(gulp.dest(config.dest))
     .pipe(browserSync.reload({stream:true}))

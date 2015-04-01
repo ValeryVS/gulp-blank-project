@@ -29,6 +29,9 @@ module.exports =
   jade:
     src: sourceDirectory + '/pages/**/*.jade'
     dest: publicDirectory
+    locals:
+      title: 'Hello world!'
+      description: 'Sample gulp generated page'
 
   sass:
     autoprefixer:
