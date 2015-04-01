@@ -19,5 +19,3 @@ See tasks in gulpfile.js folder.
 
 TODO
 ==
-
-settings for jade (page title, etc.)

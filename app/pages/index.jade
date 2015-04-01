@@ -1,28 +1,24 @@
-doctype html
-html
-  head
-    meta(charset='utf-8')
-    meta('http-equiv'='X-UA-Compatible', content='IE=edge')
-    title #{title}
-    if description
-      meta(name='description', content='#{description}')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(property='og:type', content='article')
-    if title
-      meta(property='og:title', content='#{title}')
-    if description
-      meta(property='og:description', content='#{description}')
-    link(rel='stylesheet', href='assets/app.css')
-  body
-    h1 Hello world!
-    p This is jade.
-    include ../blocks/first/first.jade
-    include ../blocks/second/second.html
-    include ../blocks/third/third.jade
-    +third({title: 'block 3', content: '3'})
-    .fourth
-      include:markdown ../blocks/fourth/fourth.md
-    .icon.icon-facebook
-    .icon.icon-twitter
-    a(href='file.txt',target='_blank') file.txt
-    script(src='assets/app.js')
+extends ../layouts/default.jade
+
+block headEnd
+  // add some other styles or meta
+
+block body
+  h1 Hello world!
+  p This is jade.
+  include ../blocks/first/first.jade
+  include ../blocks/second/second.html
+  include ../blocks/third/third.jade
+  +third({title: 'block 3', content: '3'})
+  .fourth
+    include:markdown ../blocks/fourth/fourth.md
+  .icon.icon-facebook
+  .icon.icon-twitter
+  a(href='file.txt',target='_blank') file.txt
+
+block scripts
+  // reset default scripts block on this page
+  script(src='assets/app.js')
+
+block bodyEnd
+  // add some other scripts or counters
